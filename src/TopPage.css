@@ -1,129 +1,159 @@
+/* Top Page - Full Screen */
 .top-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  color: #fff;
+  overflow-y: auto;
 }
 
+/* Header */
 .top-header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 1px solid #333;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .top-header h1 {
-  color: white;
-  margin: 0;
+  color: #fff;
+  font-size: 24px;
   font-weight: 300;
-  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: -0.5px;
 }
 
 .user-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  color: white;
+  gap: 20px;
+  color: #ccc;
+  font-size: 14px;
 }
 
 .logout-btn {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  background: rgba(50, 50, 50, 0.8);
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .logout-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+  background: rgba(70, 70, 70, 0.9);
+  border-color: #666;
+  transform: translateY(-1px);
 }
 
+/* Main Content */
 .top-main {
-  padding: 2rem;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Welcome Section */
 .welcome-section {
   text-align: center;
-  margin-bottom: 3rem;
-  color: white;
+  margin-bottom: 50px;
+  color: #fff;
 }
 
 .welcome-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 36px;
   font-weight: 300;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 
 .welcome-section p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: 18px;
+  color: #888;
+  font-weight: 300;
 }
 
+/* Cards Grid */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 2rem;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 32px;
+  color: #fff;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  border-color: #444;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  background: rgba(30, 30, 30, 0.9);
 }
 
 .card h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #fff;
+  letter-spacing: -0.5px;
 }
 
 .card p {
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
+  margin-bottom: 24px;
+  color: #888;
   line-height: 1.6;
+  font-size: 14px;
+  font-weight: 300;
 }
 
+/* Card Stats */
 .card-stats {
   display: flex;
-  gap: 2rem;
+  gap: 32px;
+  justify-content: center;
 }
 
 .stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .stat-number {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffd700;
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+  letter-spacing: -1px;
 }
 
 .stat-label {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin-top: 0.5rem;
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
+/* Activity List */
 .activity-list {
   list-style: none;
   padding: 0;
@@ -131,43 +161,113 @@
 }
 
 .activity-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 20px;
+  color: #ccc;
+  font-weight: 300;
 }
 
 .activity-list li:before {
   content: '•';
-  color: #ffd700;
-  font-size: 1.5rem;
+  color: #666;
+  font-size: 16px;
   position: absolute;
   left: 0;
-  top: 0.5rem;
+  top: 12px;
 }
 
 .activity-list li:last-child {
   border-bottom: none;
 }
 
+/* Settings Options */
 .settings-options {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 12px;
 }
 
 .setting-btn {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
+  background: rgba(30, 30, 30, 0.6);
+  color: #ccc;
+  border: 1px solid #333;
+  padding: 12px 16px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .setting-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
+  background: rgba(40, 40, 40, 0.8);
+  border-color: #444;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .top-main {
+    padding: 24px 20px;
+  }
+  
+  .welcome-section h2 {
+    font-size: 28px;
+  }
+  
+  .welcome-section p {
+    font-size: 16px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .card {
+    padding: 24px;
+  }
+  
+  .card-stats {
+    gap: 24px;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-header h1 {
+    font-size: 20px;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .welcome-section h2 {
+    font-size: 24px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .top-main {
+    padding: 20px 16px;
+  }
 }
